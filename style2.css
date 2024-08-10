@@ -1,0 +1,232 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background-color: #050a14;
+    color: white;
+}
+
+/* Style the logo */
+.logo img {
+    height: 40px;
+    width: 100px;
+}
+
+/* Style the buttons */
+.b1 {
+    height: 24px;
+    width: 60px;
+    color: white;
+    background-color: #050a14;
+    text-decoration: underline;
+    border: 0px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.b2{
+    background-color: #3261ad;
+    color: white;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.buttons button:first-child {
+    margin-left: 0;
+}
+
+nav {
+    height: 35px;
+    background-color: #2a2f37;
+}
+
+/* Style the navbar list */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+}
+
+nav li {
+    margin-top: 8px;
+}
+
+/* Style the navbar links */
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Style the slider container */
+.slider {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    background-color: rgb(18, 18, 54);
+}
+
+/* Style the individual slides */
+.slide {
+    display: none;
+    animation: slide 10s infinite alternate;
+    height: 700px;
+    width: 1349px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Show the first slide initially */
+.slide:first-child {
+    display: block;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgb(18, 18, 54);
+}
+
+/* Style the heading */
+.container h3{
+    margin-bottom: 6px;
+    margin-left: 7px;
+    color: white;
+}
+
+/* Style the button */
+.b3 {
+    background-color: rgb(18, 18, 54);
+    color: grey;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the image gallery container */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(18, 18, 54);
+}
+
+/* Style the individual image containers */
+.image-container {
+    position: relative;
+    flex: 1;
+    max-width: calc(20% - 20px); /* 20% for 5 images with 20px gap */
+    overflow: hidden;
+}
+
+/* Style the images */
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Style the image overlay (hidden by default) */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Style the buttons */
+.play-button, .demo-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    display: none;
+}
+
+/* Show buttons on hover */
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Show buttons on hover */
+.image-container:hover .play-button, .image-container:hover .demo-button {
+    display: block;
+}
+
+.select-container {
+    max-width: 1366px; 
+    height: 42px;
+    background-color: rgb(55, 55, 100);
+    display: flex;
+    align-items: center;
+}
+
+/* Style the select box */
+select {
+    width: 1000px;
+    height: 28px;
+    /*padding: 10px;*/
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(101, 101, 175);
+}
+
+/* Style the options */
+option {
+    font-size: 10px;
+}
+
+
+.leaderboard {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
